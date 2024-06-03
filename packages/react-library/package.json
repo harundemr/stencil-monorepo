@@ -24,7 +24,7 @@
     "access": "public"
   },
   "dependencies": {
-    "stencil-library": "*"
+    "monorepo-stencil-stencil-library": "*"
   },
   "gitHead": "adfc6b5449f8b4316cb18218b919aa67ea802ce8"
 }

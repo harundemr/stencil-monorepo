@@ -23,7 +23,7 @@
     "access": "public"
   },
   "dependencies": {
-    "stencil-library": "*"
+    "monorepo-stencil-stencil-library": "*"
   },
   "devDependencies": {
     "vue": "^3.4.27"
