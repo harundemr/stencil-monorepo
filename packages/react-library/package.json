@@ -1,6 +1,6 @@
 {
   "name": "monorepo-stencil-react-library",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",
   "homepage": "",
@@ -24,7 +24,7 @@
     "access": "public"
   },
   "dependencies": {
-    "monorepo-stencil-stencil-library": "*"
+    "monorepo-stencil-stencil-library": "^0.0.4"
   },
   "gitHead": "adfc6b5449f8b4316cb18218b919aa67ea802ce8"
 }
