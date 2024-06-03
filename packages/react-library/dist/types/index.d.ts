@@ -1,2 +1,2 @@
 export * from './components/stencil-generated';
-export { defineCustomElements } from "stencil-library/loader";
+export { defineCustomElements } from "monorepo-stencil-stencil-library/loader";

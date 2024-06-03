@@ -10,7 +10,7 @@
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `label`  | `label`   |             | `string` | `undefined` |
-| `type`   | `type`    |             | `string` | `undefined` |
+| `type`   | `type`    |             | `string` | `"tezt"`    |
 | `value`  | `value`   |             | `string` | `undefined` |
 
 

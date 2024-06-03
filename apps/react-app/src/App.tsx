@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { MyInput, defineCustomElements } from "react-library";
+import { MyInput, defineCustomElements } from "monorepo-stencil-react-library";
 
 defineCustomElements();
 

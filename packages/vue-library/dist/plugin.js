@@ -1,4 +1,4 @@
-import { defineCustomElements } from 'stencil-library/loader';
+import { defineCustomElements } from 'monorepo-stencil-stencil-library/loader';
 export const ComponentLibrary = {
     async install() {
         defineCustomElements();

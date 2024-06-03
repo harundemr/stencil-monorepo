@@ -20,12 +20,12 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     vueOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'monorepo-stencil-stencil-library',
       proxiesFile: '../vue-library/lib/components.ts',
       componentModels: componentModels,
     }),
     reactOutputTarget({
-      componentCorePackage: 'stencil-library',
+      componentCorePackage: 'monorepo-stencil-stencil-library',
       proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
       includePolyfills: true
     }),
