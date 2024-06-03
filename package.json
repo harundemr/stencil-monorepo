@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.13.0",
+    "lerna": "^8.1.3",
+    "typescript": "^5.4.5"
+  },
+  "scripts":{
+    "dev:vue": "lerna run build && lerna run dev --scope vue-app",
+    "dev:react": "lerna run build && lerna run dev --scope react-app"
+  }
+}
