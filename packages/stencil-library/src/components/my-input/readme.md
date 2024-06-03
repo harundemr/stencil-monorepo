@@ -23,9 +23,15 @@
 
 ## Methods
 
-### `ExampleMethod() => Promise<void>`
+### `ExampleMethod(value: string) => Promise<void>`
 
 
+
+#### Parameters
+
+| Name    | Type     | Description |
+| ------- | -------- | ----------- |
+| `value` | `string` |             |
 
 #### Returns
 

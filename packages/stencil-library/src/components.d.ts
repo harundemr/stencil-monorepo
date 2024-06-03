@@ -21,7 +21,7 @@ export namespace Components {
         "middle": string;
     }
     interface MyInput {
-        "ExampleMethod": () => Promise<void>;
+        "ExampleMethod": (value: string) => Promise<void>;
         "label": string;
         "type": string;
         "value": string;

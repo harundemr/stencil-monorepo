@@ -1,5 +1,5 @@
 {
-  "name": "vue-library",
+  "name": "@monorepo-stencil/vue-library",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",

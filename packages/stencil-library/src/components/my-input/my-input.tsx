@@ -1,18 +1,19 @@
 import { Component, Prop, Event, EventEmitter, h, Method } from '@stencil/core';
 
 @Component({
-  tag: 'my-input'
+  tag: 'my-input',
+  shadow: true
 })
 export class MyInput {
   @Prop({ mutable: true }) value: string;
   @Prop() label: string;
-  @Prop() type: string;
+  @Prop() type: string = "tezt";
 
   @Event() valueChange: EventEmitter<string>;
 
   @Method()
-  async ExampleMethod() {
-    alert('example method worked');
+  async ExampleMethod(value: string) {
+    console.log('stencil component example method worked! --> ', value);
   }
 
   handleInput(event: Event) {
@@ -24,7 +25,6 @@ export class MyInput {
   render() {
     return (
       <div>
-        <label>input label</label>
         <input type={this.type} value={this.value} placeholder={this.label}  onInput={event => this.handleInput(event)} />
       </div>
     );
