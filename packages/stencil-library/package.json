@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-stencil/stencil-library",
+  "name": "monorepo-stencil-stencil-library",
   "version": "0.0.2",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -50,5 +50,5 @@
     "puppeteer": "^21.9.0"
   },
   "license": "MIT",
-  "gitHead": "3175d62130df54eb1418bb8b70771a48143b9eec"
+  "gitHead": "adfc6b5449f8b4316cb18218b919aa67ea802ce8"
 }

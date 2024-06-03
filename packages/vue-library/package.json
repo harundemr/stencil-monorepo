@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo-stencil/vue-library",
+  "name": "monorepo-stencil-vue-library",
   "version": "0.0.2",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",
@@ -28,5 +28,5 @@
   "devDependencies": {
     "vue": "^3.4.27"
   },
-  "gitHead": "3175d62130df54eb1418bb8b70771a48143b9eec"
+  "gitHead": "adfc6b5449f8b4316cb18218b919aa67ea802ce8"
 }
