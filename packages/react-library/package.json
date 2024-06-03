@@ -25,5 +25,6 @@
   },
   "dependencies": {
     "stencil-library": "*"
-  }
+  },
+  "gitHead": "3175d62130df54eb1418bb8b70771a48143b9eec"
 }

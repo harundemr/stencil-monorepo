@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "monorepo-stencil",
   "private": true,
   "workspaces": [
     "packages/*",
