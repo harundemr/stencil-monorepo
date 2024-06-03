@@ -1,6 +1,6 @@
 {
   "name": "monorepo-stencil-vue-library",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "access": "public"
   },
   "dependencies": {
-    "monorepo-stencil-stencil-library": "^0.0.4"
+    "monorepo-stencil-stencil-library": "^0.0.5"
   },
   "devDependencies": {
     "vue": "^3.4.27"
