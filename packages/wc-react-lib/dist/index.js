@@ -1,3 +1,3 @@
 export * from './components/stencil-generated';
-export { defineCustomElements } from "monorepo-stencil-stencil-library/loader";
+export { defineCustomElements } from "wc-stencil-lib/loader";
 //# sourceMappingURL=index.js.map

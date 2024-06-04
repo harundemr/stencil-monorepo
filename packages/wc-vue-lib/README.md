@@ -1,11 +1,11 @@
-# `react-library`
+# `wc-vue-lib`
 
 > TODO: description
 
 ## Usage
 
 ```
-const reactLibrary = require('react-library');
+const vueLibrary = require('wc-vue-lib');
 
 // TODO: DEMONSTRATE API
 ```

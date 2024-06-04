@@ -13,24 +13,24 @@ const componentModels: ComponentModelConfig[] = [
 
 
 export const config: Config = {
-  namespace: 'stencil-library',
+  namespace: 'wc-stencil-lib',
   outputTargets: [
     {
       type: 'dist',
       esmLoaderPath: '../loader',
     },
     vueOutputTarget({
-      componentCorePackage: 'monorepo-stencil-stencil-library',
-      proxiesFile: '../vue-library/lib/components.ts',
+      componentCorePackage: 'wc-stencil-lib',
+      proxiesFile: '../wc-vue-lib/lib/components.ts',
       componentModels: componentModels,
     }),
     reactOutputTarget({
-      componentCorePackage: 'monorepo-stencil-stencil-library',
-      proxiesFile: '../react-library/lib/components/stencil-generated/index.ts',
+      componentCorePackage: 'wc-stencil-lib',
+      proxiesFile: '../wc-react-lib/lib/components/stencil-generated/index.ts',
       includePolyfills: true
     }),
     // angularOutputTarget({
-    //   componentCorePackage: 'stencil-library',
+    //   componentCorePackage: 'wc-stencil-lib',
     //   outputType: 'component',
     //   directivesProxyFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/components.ts',
     //   directivesArrayFile: '../angular-workspace/projects/component-library/src/lib/stencil-generated/index.ts',

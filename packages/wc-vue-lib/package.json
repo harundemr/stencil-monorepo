@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-stencil-vue-library",
+  "name": "wc-vue-lib",
   "version": "0.0.5",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",
@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "node ./__tests__/vue-library.test.js",
+    "test": "node ./__tests__/wc-vue-lib.test.js",
     "build": "npm run tsc",
     "tsc": "tsc -p . --outDir ./dist"
   },
@@ -23,10 +23,10 @@
     "access": "public"
   },
   "dependencies": {
-    "monorepo-stencil-stencil-library": "^0.0.5"
+    "wc-stencil-lib": "*"
   },
   "devDependencies": {
     "vue": "^3.4.27"
   },
-  "gitHead": "adfc6b5449f8b4316cb18218b919aa67ea802ce8"
+  "gitHead": "54e0da7a11b39a044f31dcc384caa2e5c402d1bf"
 }

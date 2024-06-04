@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "monorepo-stencil-vue-library": "^0.0.5",
+    "wc-vue-lib": "*",
     "vue": "^3.4.21"
   },
   "devDependencies": {

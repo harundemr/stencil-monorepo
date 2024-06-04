@@ -1,5 +1,5 @@
 {
-  "name": "monorepo-stencil-stencil-library",
+  "name": "wc-stencil-lib",
   "version": "0.0.5",
   "description": "Stencil Component Starter",
   "main": "dist/index.cjs.js",
@@ -7,11 +7,11 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/stencil-library/stencil-library.esm.js",
+  "unpkg": "dist/wc-stencil-lib/wc-stencil-lib.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/stencil-library/stencil-library.esm.js",
-      "require": "./dist/stencil-library/stencil-library.cjs.js"
+      "import": "./dist/wx-stencil-lib/wc-stencil-lib.esm.js",
+      "require": "./dist/wc-stencil-lib/wc-stencil-lib.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",
@@ -50,5 +50,5 @@
     "puppeteer": "^21.9.0"
   },
   "license": "MIT",
-  "gitHead": "adfc6b5449f8b4316cb18218b919aa67ea802ce8"
+  "gitHead": "54e0da7a11b39a044f31dcc384caa2e5c402d1bf"
 }
