@@ -1,6 +1,6 @@
 {
   "name": "angular-workspace",
-  "version": "0.0.0",
+  "version": "0.0.7",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -20,8 +20,8 @@
     "@angular/router": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3",
-    "wc-stencil-lib": "*"
+    "wc-stencil-lib": "^0.0.7",
+    "zone.js": "~0.14.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.2",
@@ -34,6 +34,5 @@
     "karma-jasmine-html-reporter": "~2.1.0",
     "ng-packagr": "^18.0.0",
     "typescript": "~5.4.2"
-
   }
 }
