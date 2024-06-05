@@ -1,0 +1,15 @@
+{
+  "name": "wc-angular-lib",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^18.0.0",
+    "@angular/core": "^18.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "scripts": {
+    "build" : "npx -p @angular/cli ng build wc-angular-lib"
+  },
+  "sideEffects": false
+}

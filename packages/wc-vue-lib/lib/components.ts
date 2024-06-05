@@ -8,6 +8,13 @@ import type { JSX } from 'wc-stencil-lib';
 
 
 
+export const MyButton = /*@__PURE__*/ defineContainer<JSX.MyButton>('my-button', undefined, [
+  'variant',
+  'type',
+  'label'
+]);
+
+
 export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component', undefined, [
   'first',
   'middle',

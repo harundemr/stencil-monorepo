@@ -1,15 +1,15 @@
 import React, { useRef, useState } from "react";
-import { MyInput, defineCustomElements } from "wc-react-lib";
+import { MyButton, MyInput, defineCustomElements } from "wc-react-lib";
 
 defineCustomElements();
 
 const App: React.FC = () => {
   const [message, setMessage] = useState("");
-  const refInput = useRef<{ ExampleMethod: () => void }>(null);
+  const refInput = useRef<{ ExampleMethod: (e:string) => void }>(null);
 
   const handleClick = () => {
     if (refInput.current) {
-      refInput.current.ExampleMethod();
+      refInput.current.ExampleMethod("react app üzerinden çağrıldı");
     }
   };
 
@@ -32,7 +32,7 @@ const App: React.FC = () => {
       />
 
       <p>model value : {message}</p>
-      <button onClick={handleClick}>click</button>
+      <MyButton onClick={handleClick} label="my-input Method test" />
     </div>
   );
 };

@@ -7,7 +7,7 @@ import { Component, Prop, Event, EventEmitter, h, Method } from '@stencil/core';
 export class MyInput {
   @Prop({ mutable: true }) value: string;
   @Prop() label: string;
-  @Prop() type: string = "tezt";
+  @Prop() type: string = "text";
 
   @Event() valueChange: EventEmitter<string>;
 

@@ -3,7 +3,8 @@
   "private": true,
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "packages/angular-workspace/projects/*"
   ],
   "devDependencies": {
     "@types/node": "^20.13.0",
@@ -11,7 +12,7 @@
     "typescript": "^5.4.5"
   },
   "scripts":{
-    "dev:vue": "lerna run build && lerna run dev --scope vue-app",
-    "dev:react": "lerna run build && lerna run dev --scope react-app"
+    "dev:vue": "lerna run build --scope wc-stencil-lib && lerna run build --scope wc-vue-lib && lerna run dev --scope vue-app",
+    "dev:react": "lerna run build --scope wc-stencil-lib && lerna run build --scope wc-react-lib && lerna run dev --scope react-app"
   }
 }
