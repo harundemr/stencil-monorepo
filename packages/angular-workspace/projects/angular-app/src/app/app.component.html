@@ -182,12 +182,11 @@
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       test
-      <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
-        <my-component first="Your" last="Name"></my-component>
-        <my-input id="name" type="text" (ngModel)="varTest" ></my-input>
+        <!-- <my-component first="Your" last="Name"></my-component> -->
+        <my-input type="text" (ngModel)="varTest"  (valueChange)="test($event)"></my-input>
         <p click="">Hello, {{ varTest }}!</p>
-        <my-button type="submit" label="click me"></my-button>
-      </form>
+        <!-- <my-button type="submit" label="click me"></my-button> -->
+
     </div>
   </div>
 </main>

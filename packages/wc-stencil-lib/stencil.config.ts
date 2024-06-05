@@ -26,7 +26,6 @@ export const config: Config = {
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader',
     },
     vueOutputTarget({
       componentCorePackage: 'wc-stencil-lib',
@@ -42,7 +41,7 @@ export const config: Config = {
       componentCorePackage: 'wc-stencil-lib',
       outputType: 'component',
       directivesProxyFile: '../angular-workspace/projects/wc-angular-lib/src/lib/stencil-generated/components.ts',
-      valueAccessorConfigs: angularValueAccessorBindings,
+      valueAccessorConfigs: angularValueAccessorBindings
     }),
     {
       type: 'dist-custom-elements',

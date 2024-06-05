@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
 import { MyButton, MyInput, defineCustomElements } from "wc-react-lib";
+import { MyInputCustomEvent } from "wc-stencil-lib";
 
 defineCustomElements();
 
 const App: React.FC = () => {
   const [message, setMessage] = useState("");
-  const refInput = useRef<{ ExampleMethod: (e:string) => void }>(null);
+  const refInput = useRef<HTMLMyInputElement>(null);
 
   const handleClick = () => {
     if (refInput.current) {
@@ -13,23 +14,14 @@ const App: React.FC = () => {
     }
   };
 
-  const onChanc = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChanc = (e: MyInputCustomEvent<string>) => {
     console.log(e.target.value);
     setMessage(e.target.value);
   };
 
   return (
     <div className="greetings">
-      <MyInput
-        ref={refInput}
-        value={message}
-        onValueChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-          onChanc(e);
-        }}
-        onMyClick={(e: string) => {
-          console.log(e);
-        }}
-      />
+      <MyInput ref={refInput} value={message} onValueChange={onChanc} />
 
       <p>model value : {message}</p>
       <MyButton onClick={handleClick} label="my-input Method test" />
