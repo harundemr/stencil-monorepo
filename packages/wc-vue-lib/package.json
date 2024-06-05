@@ -1,6 +1,6 @@
 {
   "name": "wc-vue-lib",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",
   "homepage": "",
@@ -23,7 +23,7 @@
     "access": "public"
   },
   "dependencies": {
-    "wc-stencil-lib": "^0.0.7"
+    "wc-stencil-lib": "^0.0.8"
   },
   "devDependencies": {
     "vue": "^3.4.27"

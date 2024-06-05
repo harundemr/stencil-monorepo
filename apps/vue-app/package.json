@@ -1,6 +1,6 @@
 {
   "name": "vue-app",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "vue": "^3.4.21",
-    "wc-vue-lib": "^0.0.7"
+    "wc-vue-lib": "^0.0.8"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.4",
