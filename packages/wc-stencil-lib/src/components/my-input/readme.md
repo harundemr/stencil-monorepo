@@ -10,7 +10,7 @@
 | Property | Attribute | Description | Type     | Default     |
 | -------- | --------- | ----------- | -------- | ----------- |
 | `label`  | `label`   |             | `string` | `undefined` |
-| `type`   | `type`    |             | `string` | `"text"`    |
+| `type`   | `type`    |             | `string` | `'text'`    |
 | `value`  | `value`   |             | `string` | `undefined` |
 
 
@@ -18,6 +18,7 @@
 
 | Event         | Description | Type                  |
 | ------------- | ----------- | --------------------- |
+| `secretEvent` |             | `CustomEvent<string>` |
 | `valueChange` |             | `CustomEvent<string>` |
 
 

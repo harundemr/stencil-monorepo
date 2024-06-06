@@ -15,6 +15,12 @@ export const MyButton = /*@__PURE__*/ defineContainer<JSX.MyButton>('my-button',
 ]);
 
 
+export const MyCard = /*@__PURE__*/ defineContainer<JSX.MyCard>('my-card', undefined, [
+  'header',
+  'footer'
+]);
+
+
 export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component', undefined, [
   'first',
   'middle',
@@ -22,11 +28,38 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
 ]);
 
 
+export const MyDialog = /*@__PURE__*/ defineContainer<JSX.MyDialog>('my-dialog', undefined, [
+  'onOk',
+  'onCancel'
+]);
+
+
 export const MyInput = /*@__PURE__*/ defineContainer<JSX.MyInput, JSX.MyInput["value"]>('my-input', undefined, [
   'value',
   'label',
   'type',
-  'valueChange'
+  'valueChange',
+  'secretEvent'
 ],
 'value', 'valueChange');
+
+
+export const MyLayout = /*@__PURE__*/ defineContainer<JSX.MyLayout>('my-layout', undefined);
+
+
+export const MyTextField = /*@__PURE__*/ defineContainer<JSX.MyTextField, JSX.MyTextField["value"]>('my-text-field', undefined, [
+  'placeholder',
+  'value',
+  'error',
+  'label',
+  'icon',
+  'caption',
+  'size',
+  'required',
+  'optional',
+  'success',
+  'disabled',
+  'ifxInput'
+],
+'value', 'ifxInput');
 

@@ -9,12 +9,24 @@ const componentModels: ComponentModelConfig[] = [
     event: 'valueChange',
     targetAttr: 'value',
   },
+  {
+    elements: ['my-text-field'],
+    event: 'ifxInput',
+    targetAttr: 'value',
+  },
 ];
 
 const angularValueAccessorBindings: ValueAccessorConfig[] = [
   {
     elementSelectors: ['my-input'],
     event: 'valueChange',
+    targetAttr: 'value',
+    type: 'text',
+  },
+
+  {
+    elementSelectors: ['my-text-field'],
+    event: 'ifxInput',
     targetAttr: 'value',
     type: 'text',
   },
@@ -41,6 +53,7 @@ export const config: Config = {
       componentCorePackage: 'wc-stencil-lib',
       outputType: 'component',
       directivesProxyFile: '../angular-workspace/projects/wc-angular-lib/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../angular-workspace/projects/wc-angular-lib/src/lib/stencil-generated/index.ts',
       valueAccessorConfigs: angularValueAccessorBindings
     }),
     {

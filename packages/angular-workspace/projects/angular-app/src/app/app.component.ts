@@ -1,24 +1,40 @@
-import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { MyInput } from '../../../../dist/wc-angular-lib/public-api';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
+  @ViewChild('myInput') myInput: HTMLMyInputElement | undefined;
+  @ViewChild('myDialog') myDialog: HTMLMyDialogElement | undefined;
+
   title = 'angular-app';
   varTest: string = '';
 
-  onSubmit(form: NgForm) {
-    if (form.valid) {
-      console.log('Form Submitted!', form.value);
-    }
+  onClick() {
+    this.myInput?.ExampleMethod('angular üzerinden çağrıldı');
   }
 
-  test(event:any){
-    this.varTest = event.detail;
-    console.log(event.detail)
+  handleClickValue(value: string) {
+    console.log(value);
+  }
+
+  onSecretEvent(event: any) {
+    console.log(event.detail);
+  }
+
+  onClickOpenDialog() {
+    this.myDialog?.open(
+      () => {
+        // ok button callback function
+        console.log('ok clicked');
+      },
+      () => {
+        // cancel button callback function
+        console.log('cancel clicked');
+      }
+    );
   }
 }

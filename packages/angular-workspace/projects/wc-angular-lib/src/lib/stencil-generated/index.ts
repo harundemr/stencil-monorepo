@@ -3,6 +3,10 @@ import * as d from './components';
 
 export const DIRECTIVES = [
   d.MyButton,
+  d.MyCard,
   d.MyComponent,
-  d.MyInput
+  d.MyDialog,
+  d.MyInput,
+  d.MyLayout,
+  d.MyTextField
 ];
