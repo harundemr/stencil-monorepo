@@ -1,6 +1,6 @@
 {
   "name": "angular-workspace",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
@@ -19,7 +19,7 @@
     "@angular/router": "^18.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "wc-stencil-lib": "^0.0.8",
+    "wc-stencil-lib": "^0.0.9",
     "zone.js": "~0.14.3"
   },
   "devDependencies": {

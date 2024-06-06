@@ -1,6 +1,6 @@
 {
   "name": "wc-react-lib",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "> TODO: description",
   "author": "harundemr <harundemirp@gmail.com>",
   "homepage": "",
@@ -24,7 +24,7 @@
     "access": "public"
   },
   "dependencies": {
-    "wc-stencil-lib": "^0.0.8"
+    "wc-stencil-lib": "^0.0.9"
   },
   "gitHead": "54e0da7a11b39a044f31dcc384caa2e5c402d1bf"
 }
