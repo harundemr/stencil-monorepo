@@ -10,13 +10,32 @@
   </div>
   <div slot="content">
     <h4>my-layout content area</h4>
-    <my-card header="Example emit" footer="console üzerinden izlenebilir">
+    <my-card header="Example Reactive Form" >
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">Name:</label>
+          <my-input id="name" formControlName="name"  ngDefaultControl/>
+        </div>
+
+        <div>
+          <label for="email">Email:</label>
+          <my-input id="email" formControlName="email" ngDefaultControl />
+        </div>
+
+        <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+      </form>
+
+
+    </my-card>
+    <my-card header="Example ngModel" >
       <my-input
-        (value)="(varTest)"
+        [(ngModel)]="varTest"
         type="text"
         label="name"
         (secretEvent)="onSecretEvent($event)"
+        ngDefaultControl
       ></my-input>
+      <p>{{varTest}}</p>
     </my-card>
     <br />
     <my-card
@@ -29,6 +48,7 @@
         type="text"
         label="name"
       ></my-input>
+      <br />
       <br />
       <my-button (click)="onClick()" label="call my-input method"></my-button>
     </my-card>

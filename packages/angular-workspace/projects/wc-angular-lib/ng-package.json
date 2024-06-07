@@ -3,5 +3,6 @@
   "dest": "../../dist/wc-angular-lib",
   "lib": {
     "entryFile": "src/public-api.ts"
-  }
+  },
+  "allowedNonPeerDependencies": ["wc-stencil-lib"]
 }

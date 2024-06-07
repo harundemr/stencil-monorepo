@@ -8,5 +8,6 @@ export const DIRECTIVES = [
   d.MyDialog,
   d.MyInput,
   d.MyLayout,
+  d.MyTable,
   d.MyTextField
 ];

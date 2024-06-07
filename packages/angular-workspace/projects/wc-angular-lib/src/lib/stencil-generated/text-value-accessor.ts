@@ -5,10 +5,9 @@ import { ValueAccessor } from './value-accessor';
 
 @Directive({
   /* tslint:disable-next-line:directive-selector */
-  selector: 'my-input, my-text-field',
+  selector: 'my-input[type=text]',
   host: {
-    '(valueChange)': 'handleChangeEvent($event.target.value)',
-    '(ifxInput)': 'handleChangeEvent($event.target.value)'
+    '(myChange)': 'handleChangeEvent($event.target.value)'
   },
   providers: [
     {
