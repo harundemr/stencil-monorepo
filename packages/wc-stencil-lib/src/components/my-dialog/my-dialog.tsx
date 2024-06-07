@@ -3,7 +3,7 @@ import { Component, State, Method, h, Event } from '@stencil/core';
 @Component({
   tag: 'my-dialog',
   styleUrl: 'my-dialog.css',
-  shadow: true
+  shadow: true,
 })
 export class MyDialog {
   @State() isOpen: boolean = false;
@@ -37,7 +37,7 @@ export class MyDialog {
 
   render() {
     return (
-      <div class={{ 'dialog': true, 'open': this.isOpen }}>
+      <div class={{ dialog: true, open: this.isOpen }}>
         <div class="dialog-content">
           <slot></slot>
           <div class="dialog-actions">

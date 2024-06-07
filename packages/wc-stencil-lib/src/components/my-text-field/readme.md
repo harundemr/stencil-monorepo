@@ -1,9 +1,6 @@
 # my-text-field
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -21,27 +18,20 @@
 | `success`     | `success`     |             | `boolean` | `false`         |
 | `value`       | `value`       |             | `string`  | `''`            |
 
-
 ## Events
 
 | Event      | Description | Type                  |
 | ---------- | ----------- | --------------------- |
 | `ifxInput` |             | `CustomEvent<string>` |
 
-
 ## Methods
 
 ### `reset() => Promise<void>`
-
-
 
 #### Returns
 
 Type: `Promise<void>`
 
+---
 
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

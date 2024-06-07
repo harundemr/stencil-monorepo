@@ -10,11 +10,11 @@
   </div>
   <div slot="content">
     <h4>my-layout content area</h4>
-    <my-card header="Example Reactive Form" >
+    <my-card header="Example Reactive Form">
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
         <div>
           <label for="name">Name:</label>
-          <my-input id="name" formControlName="name"  ngDefaultControl/>
+          <my-input id="name" formControlName="name" ngDefaultControl />
         </div>
 
         <div>
@@ -24,10 +24,8 @@
 
         <button type="submit" [disabled]="contactForm.invalid">Submit</button>
       </form>
-
-
     </my-card>
-    <my-card header="Example ngModel" >
+    <my-card header="Example ngModel">
       <my-input
         [(ngModel)]="varTest"
         type="text"
@@ -35,7 +33,7 @@
         (secretEvent)="onSecretEvent($event)"
         ngDefaultControl
       ></my-input>
-      <p>{{varTest}}</p>
+      <p>{{ varTest }}</p>
     </my-card>
     <br />
     <my-card

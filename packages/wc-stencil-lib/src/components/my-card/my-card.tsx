@@ -3,7 +3,7 @@ import { Component, Prop, h } from '@stencil/core';
 @Component({
   tag: 'my-card',
   styleUrl: 'my-card.css',
-  shadow: true
+  shadow: true,
 })
 export class MyCard {
   @Prop() header: string;

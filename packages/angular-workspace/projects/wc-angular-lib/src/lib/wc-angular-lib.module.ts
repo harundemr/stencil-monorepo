@@ -9,8 +9,8 @@ import { defineCustomElements } from 'wc-stencil-lib/loader';
     {
       provide: APP_INITIALIZER,
       useFactory: () => defineCustomElements,
-      multi: true
+      multi: true,
     },
-  ]
+  ],
 })
 export class ComponentLibraryModule {}

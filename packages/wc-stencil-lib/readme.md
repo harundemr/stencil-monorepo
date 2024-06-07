@@ -99,10 +99,7 @@ function App() {
   return (
     <>
       <div>
-        <my-component
-          first="Stencil"
-          last="'Don't call me a framework' JS"
-        ></my-component>
+        <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
       </div>
     </>
   );

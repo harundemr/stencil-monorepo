@@ -1,9 +1,6 @@
 # my-table
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -12,7 +9,6 @@
 | `columns` | --        |             | `any[]` | `undefined` |
 | `data`    | --        |             | `any[]` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

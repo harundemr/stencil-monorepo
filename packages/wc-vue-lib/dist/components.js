@@ -1,23 +1,26 @@
 import { defineContainer } from './vue-component-lib/utils';
 export const MyButton = defineContainer('my-button', undefined, [
-    'variant',
-    'type',
-    'label'
+  'variant',
+  'type',
+  'label',
 ]);
 export const MyCard = defineContainer('my-card', undefined, [
-    'header',
-    'footer'
+  'header',
+  'footer',
 ]);
 export const MyComponent = defineContainer('my-component', undefined, [
-    'first',
-    'middle',
-    'last'
+  'first',
+  'middle',
+  'last',
 ]);
 export const MyDialog = defineContainer('my-dialog', undefined, [
-    'ok',
-    'cancel'
+  'ok',
+  'cancel',
 ]);
-export const MyInput = defineContainer('my-input', undefined, [
+export const MyInput = defineContainer(
+  'my-input',
+  undefined,
+  [
     'color',
     'accept',
     'autocapitalize',
@@ -47,14 +50,20 @@ export const MyInput = defineContainer('my-input', undefined, [
     'myInput',
     'myChange',
     'myBlur',
-    'myFocus'
-], 'value', 'valueChange');
+    'myFocus',
+  ],
+  'value',
+  'valueChange',
+);
 export const MyLayout = defineContainer('my-layout', undefined);
 export const MyTable = defineContainer('my-table', undefined, [
-    'columns',
-    'data'
+  'columns',
+  'data',
 ]);
-export const MyTextField = defineContainer('my-text-field', undefined, [
+export const MyTextField = defineContainer(
+  'my-text-field',
+  undefined,
+  [
     'placeholder',
     'value',
     'error',
@@ -66,6 +75,9 @@ export const MyTextField = defineContainer('my-text-field', undefined, [
     'optional',
     'success',
     'disabled',
-    'ifxInput'
-], 'value', 'ifxInput');
+    'ifxInput',
+  ],
+  'value',
+  'ifxInput',
+);
 //# sourceMappingURL=components.js.map

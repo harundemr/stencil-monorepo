@@ -5,7 +5,6 @@ import { Component, Prop, State, h } from '@stencil/core';
   styleUrl: 'my-table.scss',
   shadow: true,
 })
-
 export class MyTable {
   @Prop() columns: any[];
   @Prop() data: any[];
@@ -16,7 +15,6 @@ export class MyTable {
   @State() filters: { [key: string]: string } = {};
 
   componentWillLoad() {
-
     if (!Array.isArray(this.data)) {
       console.error('Data is not an array');
     } else {
@@ -60,7 +58,6 @@ export class MyTable {
   }
 
   render() {
-
     if (!Array.isArray(this.data) || this.data.length === 0) {
       return <div>No data available</div>;
     }
@@ -79,24 +76,12 @@ export class MyTable {
             <tr>
               {this.columns?.map(column => (
                 <th>
-                  <input
-                    type="text"
-                    placeholder={`Filter by ${column?.label}`}
-                    onInput={(event) => this.handleFilterChange(event, column?.key)}
-                  />
+                  <input type="text" placeholder={`Filter by ${column?.label}`} onInput={event => this.handleFilterChange(event, column?.key)} />
                 </th>
               ))}
             </tr>
           </thead>
-          <tbody>
-            {this.sortedData?.map(row => (
-              <tr>
-                {this.columns?.map(column => (
-                  <td>{row[column?.key]}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
+          <tbody>{this.sortedData?.map(row => <tr>{this.columns?.map(column => <td>{row[column?.key]}</td>)}</tr>)}</tbody>
         </table>
       </div>
     );

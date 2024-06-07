@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState } from 'react';
 import {
   MyButton,
   MyCard,
@@ -6,13 +6,13 @@ import {
   MyInput,
   MyLayout,
   defineCustomElements,
-} from "wc-react-lib";
-import { MyInputCustomEvent } from "wc-stencil-lib";
+} from 'wc-react-lib';
+import { MyInputCustomEvent } from 'wc-stencil-lib';
 
 defineCustomElements();
 
 const App: React.FC = () => {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
   const refInput = useRef<HTMLMyInputElement>(null);
   const refDialog = useRef<HTMLMyDialogElement>(null);
 
@@ -25,7 +25,7 @@ const App: React.FC = () => {
   const onChanc = (
     e: MyInputCustomEvent<{
       value: string | number | null | undefined;
-    }>
+    }>,
   ) => {
     console.log(e.target.value);
     setMessage(e.target.value as React.SetStateAction<string>);
@@ -36,12 +36,12 @@ const App: React.FC = () => {
       refDialog.current.open(
         () => {
           // ok button callback function
-          console.log("ok clicked");
+          console.log('ok clicked');
         },
         () => {
           // cancel button callback function
-          console.log("cancel clicked");
-        }
+          console.log('cancel clicked');
+        },
       );
     }
   };

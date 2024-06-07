@@ -26,7 +26,6 @@ const angularValueAccessorBindings: ValueAccessorConfig[] = [
   },
 ];
 
-
 export const config: Config = {
   namespace: 'wc-stencil-lib',
   outputTargets: [
@@ -38,14 +37,14 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'wc-stencil-lib',
       proxiesFile: '../wc-react-lib/lib/components/stencil-generated/index.ts',
-      includePolyfills: true
+      includePolyfills: true,
     }),
     angularOutputTarget({
       componentCorePackage: 'wc-stencil-lib',
       outputType: 'component',
       directivesProxyFile: '../angular-workspace/projects/wc-angular-lib/src/lib/stencil-generated/components.ts',
       directivesArrayFile: '../angular-workspace/projects/wc-angular-lib/src/lib/stencil-generated/index.ts',
-      valueAccessorConfigs: angularValueAccessorBindings
+      valueAccessorConfigs: angularValueAccessorBindings,
     }),
     {
       type: 'dist',
@@ -69,7 +68,7 @@ export const config: Config = {
   },
   plugins: [
     sass({
-      injectGlobalPaths: ['src/global/variables.scss', 'src/global/main.scss']
-    })
-  ]
+      injectGlobalPaths: ['src/global/variables.scss', 'src/global/main.scss'],
+    }),
+  ],
 };

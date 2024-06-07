@@ -22,6 +22,7 @@
     "dev:vue": "lerna run build --scope wc-stencil-lib && lerna run build --scope wc-vue-lib && lerna run dev --scope vue-app",
     "dev:react": "lerna run build --scope wc-stencil-lib && lerna run build --scope wc-react-lib && lerna run dev --scope react-app",
     "dev:angular": "lerna run build --scope wc-stencil-lib && lerna run build --scope wc-angular-lib && lerna run dev --scope angular-workspace",
-    "prepare": "husky install"
+    "prepare": "husky",
+    "format": "prettier --write ."
   }
 }

@@ -6,14 +6,15 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class MyButton {
-  @Prop() variant: string = "primary";
-  @Prop() type: string = "button";
-  @Prop() label: string = "";
+  @Prop() variant: string = 'primary';
+  @Prop() type: string = 'button';
+  @Prop() label: string = '';
 
   render() {
     return (
-      <button class={this.variant} type={this.type}>{this.label}</button>
+      <button class={this.variant} type={this.type}>
+        {this.label}
+      </button>
     );
   }
-
 }

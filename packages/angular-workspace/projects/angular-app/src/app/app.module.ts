@@ -1,21 +1,23 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA, APP_INITIALIZER } from '@angular/core';
+import {
+  NgModule,
+  CUSTOM_ELEMENTS_SCHEMA,
+  APP_INITIALIZER,
+} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentLibraryModule, MyInput } from 'wc-angular-lib';
 import { defineCustomElements } from 'wc-stencil-lib/loader';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
-    ComponentLibraryModule
+    ComponentLibraryModule,
   ],
   providers: [
     {
@@ -25,6 +27,6 @@ import { defineCustomElements } from 'wc-stencil-lib/loader';
     },
   ],
   bootstrap: [AppComponent],
-  schemas:[CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}

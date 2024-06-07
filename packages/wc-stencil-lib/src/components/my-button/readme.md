@@ -1,9 +1,6 @@
 # my-button
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -13,7 +10,6 @@
 | `type`    | `type`    |             | `string` | `"button"`  |
 | `variant` | `variant` |             | `string` | `"primary"` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

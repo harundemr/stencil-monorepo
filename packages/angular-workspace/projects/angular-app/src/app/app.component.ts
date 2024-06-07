@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   varTest: string = '';
 
   onClick() {
-     this.myInput?.setFocus();
+    this.myInput?.setFocus();
   }
 
   handleClickValue(value: string) {
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
       () => {
         // cancel button callback function
         console.log('cancel clicked');
-      }
+      },
     );
   }
 
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.contactForm = this.fb.group({
       name: [''],
-      email: ['']
+      email: [''],
     });
   }
 

@@ -39,20 +39,7 @@
 //   }
 // }
 
-
-import {
-  Component,
-  ComponentInterface,
-  Element,
-  Event,
-  EventEmitter,
-  Host,
-  Method,
-  Prop,
-  State,
-  Watch,
-  h,
-} from '@stencil/core';
+import { Component, ComponentInterface, Element, Event, EventEmitter, Host, Method, Prop, State, Watch, h } from '@stencil/core';
 
 import { AutocompleteTypes, Color, TextFieldTypes } from '../../interfaces';
 
@@ -226,7 +213,7 @@ export class MyInput implements ComponentInterface {
   /**
    * Emitted when the value has changed.
    */
-  @Event() myChange!: EventEmitter<{value: string | number | undefined | null}>;
+  @Event() myChange!: EventEmitter<{ value: string | number | undefined | null }>;
 
   /**
    * Emitted when the input loses focus.
@@ -356,7 +343,7 @@ export class MyInput implements ComponentInterface {
       >
         <input
           class="native-input"
-          ref={(input) => (this.nativeInput = input)}
+          ref={input => (this.nativeInput = input)}
           aria-labelledby={labelId}
           disabled={this.disabled}
           accept={this.accept}
@@ -388,13 +375,7 @@ export class MyInput implements ComponentInterface {
           onKeyDown={this.onKeydown}
         />
         {this.clearInput && !this.readonly && !this.disabled && (
-          <button
-            type="button"
-            class="input-clear-icon"
-            tabindex="-1"
-            onTouchStart={this.clearTextInput}
-            onMouseDown={this.clearTextInput}
-          />
+          <button type="button" class="input-clear-icon" tabindex="-1" onTouchStart={this.clearTextInput} onMouseDown={this.clearTextInput} />
         )}
       </Host>
     );
