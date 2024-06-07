@@ -1,0 +1,57 @@
+:host {
+  display: block;
+}
+
+.table-container {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    cursor: pointer;
+    padding: 8px 16px;
+    text-align: left;
+    border-right: 1px solid $border-color;
+    font-weight: 500;
+
+    input {
+      outline: 0;
+      border: 1px solid $border-color;
+      padding: 8px 16px;
+    }
+  }
+
+
+  tr th:last-child {
+    border-right: 0;
+  }
+
+  tr.hoverable th:hover,
+  tbody tr:hover {
+    background-color: $hover-bg-color;
+  }
+
+  tr:not(.hoverable) th {
+    padding: 0 16px;
+  }
+
+  tr:not(.hoverable):hover th {
+    cursor: default;
+  }
+
+  tbody {
+    border-top: 1px solid $border-color;
+  }
+
+  td {
+    padding: 8px 16px;
+    border-right: 1px solid $border-color;
+  }
+
+  tr td:last-child {
+    border-right: 0;
+  }
+}

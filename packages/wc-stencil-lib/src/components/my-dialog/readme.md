@@ -5,12 +5,12 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Events
 
-| Property   | Attribute | Description | Type         | Default     |
-| ---------- | --------- | ----------- | ------------ | ----------- |
-| `onCancel` | --        |             | `() => void` | `undefined` |
-| `onOk`     | --        |             | `() => void` | `undefined` |
+| Event    | Description | Type               |
+| -------- | ----------- | ------------------ |
+| `cancel` |             | `CustomEvent<any>` |
+| `ok`     |             | `CustomEvent<any>` |
 
 
 ## Methods

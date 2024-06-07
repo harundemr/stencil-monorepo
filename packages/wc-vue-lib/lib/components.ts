@@ -29,22 +29,53 @@ export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-co
 
 
 export const MyDialog = /*@__PURE__*/ defineContainer<JSX.MyDialog>('my-dialog', undefined, [
-  'onOk',
-  'onCancel'
+  'ok',
+  'cancel'
 ]);
 
 
 export const MyInput = /*@__PURE__*/ defineContainer<JSX.MyInput, JSX.MyInput["value"]>('my-input', undefined, [
-  'value',
-  'label',
+  'color',
+  'accept',
+  'autocapitalize',
+  'autocomplete',
+  'autocorrect',
+  'autofocus',
+  'clearInput',
+  'clearOnEdit',
+  'disabled',
+  'enterkeyhint',
+  'inputmode',
+  'max',
+  'maxlength',
+  'min',
+  'minlength',
+  'multiple',
+  'name',
+  'pattern',
+  'placeholder',
+  'readonly',
+  'required',
+  'spellcheck',
+  'step',
+  'size',
   'type',
-  'valueChange',
-  'secretEvent'
+  'value',
+  'myInput',
+  'myChange',
+  'myBlur',
+  'myFocus'
 ],
 'value', 'valueChange');
 
 
 export const MyLayout = /*@__PURE__*/ defineContainer<JSX.MyLayout>('my-layout', undefined);
+
+
+export const MyTable = /*@__PURE__*/ defineContainer<JSX.MyTable>('my-table', undefined, [
+  'columns',
+  'data'
+]);
 
 
 export const MyTextField = /*@__PURE__*/ defineContainer<JSX.MyTextField, JSX.MyTextField["value"]>('my-text-field', undefined, [

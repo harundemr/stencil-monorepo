@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 import { ComponentModelConfig, vueOutputTarget } from '@stencil/vue-output-target';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { ValueAccessorConfig, angularOutputTarget } from '@stencil/angular-output-target';
+import { sass } from '@stencil/sass';
 
 const componentModels: ComponentModelConfig[] = [
   {
@@ -18,15 +19,8 @@ const componentModels: ComponentModelConfig[] = [
 
 const angularValueAccessorBindings: ValueAccessorConfig[] = [
   {
-    elementSelectors: ['my-input'],
-    event: 'valueChange',
-    targetAttr: 'value',
-    type: 'text',
-  },
-
-  {
-    elementSelectors: ['my-text-field'],
-    event: 'ifxInput',
+    elementSelectors: ['my-input[type=text]'],
+    event: 'myChange',
     targetAttr: 'value',
     type: 'text',
   },
@@ -36,9 +30,6 @@ const angularValueAccessorBindings: ValueAccessorConfig[] = [
 export const config: Config = {
   namespace: 'wc-stencil-lib',
   outputTargets: [
-    {
-      type: 'dist',
-    },
     vueOutputTarget({
       componentCorePackage: 'wc-stencil-lib',
       proxiesFile: '../wc-vue-lib/lib/components.ts',
@@ -57,6 +48,10 @@ export const config: Config = {
       valueAccessorConfigs: angularValueAccessorBindings
     }),
     {
+      type: 'dist',
+      esmLoaderPath: '../loader',
+    },
+    {
       type: 'dist-custom-elements',
       customElementsExportBehavior: 'auto-define-custom-elements',
       externalRuntime: false,
@@ -72,4 +67,9 @@ export const config: Config = {
   testing: {
     browserHeadless: 'new',
   },
+  plugins: [
+    sass({
+      injectGlobalPaths: ['src/global/variables.scss', 'src/global/main.scss']
+    })
+  ]
 };

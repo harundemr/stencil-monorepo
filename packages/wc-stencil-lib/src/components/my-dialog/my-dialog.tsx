@@ -1,4 +1,4 @@
-import { Component, Prop, State, Method, h } from '@stencil/core';
+import { Component, State, Method, h, Event } from '@stencil/core';
 
 @Component({
   tag: 'my-dialog',
@@ -7,13 +7,13 @@ import { Component, Prop, State, Method, h } from '@stencil/core';
 })
 export class MyDialog {
   @State() isOpen: boolean = false;
-  @Prop() onOk: () => void;
-  @Prop() onCancel: () => void;
+  @Event() ok: () => void;
+  @Event() cancel: () => void;
 
   @Method()
   async open(onOk: () => void, onCancel: () => void) {
-    this.onOk = onOk;
-    this.onCancel = onCancel;
+    this.ok = onOk;
+    this.cancel = onCancel;
     this.isOpen = true;
   }
 
@@ -22,15 +22,15 @@ export class MyDialog {
   }
 
   handleOk() {
-    if (this.onOk) {
-      this.onOk();
+    if (this.ok) {
+      this.ok();
     }
     this.close();
   }
 
   handleCancel() {
-    if (this.onCancel) {
-      this.onCancel();
+    if (this.cancel) {
+      this.cancel();
     }
     this.close();
   }

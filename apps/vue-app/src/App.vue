@@ -1,6 +1,6 @@
 <script setup>
-import { ref } from "vue";
-import { MyButton, MyInput } from "wc-vue-lib";
+import { ref, onMounted } from "vue";
+import { MyButton, MyInput, MyTable } from "wc-vue-lib";
 const message = ref("");
 const message1 = ref("");
 const refInput = ref();
@@ -18,14 +18,67 @@ function onClickOpenDialog() {
   refDialog.value.open(
     () => {
       // ok button callback function
-      console.log("ok clicked")
+      console.log("ok clicked");
     },
     () => {
       // cancel button callback function
-      console.log("cancel clicked")
+      console.log("cancel clicked");
     }
   );
 }
+
+const columns = ref([
+  { key: "id", label: "Id" },
+  { key: "name", label: "Name" },
+  { key: "surname", label: "Surname" },
+  { key: "age", label: "Age" },
+  { key: "email", label: "Email" },
+]);
+
+const rows = ref([
+  {
+    name: "harun",
+    surname: "Demir",
+    age: "29",
+    email: "harundemir@thy.com",
+    id: "8a04",
+  },
+  {
+    id: "6ee5",
+    name: "1",
+    surname: "2",
+    age: "3",
+    email: "4",
+  },
+  {
+    id: "e940",
+    name: "3",
+    surname: "4",
+    age: "5",
+    email: "6",
+  },
+  {
+    id: "6998",
+    name: "1",
+    surname: "3",
+    age: "4",
+    email: "5",
+  },
+  {
+    id: "cf12",
+    name: "Ulaş",
+    surname: "Turan",
+    age: "27",
+    email: "ulas@a.com",
+  },
+  {
+    id: "d71a",
+    name: "3",
+    surname: "4",
+    age: "5",
+    email: "6",
+  },
+]);
 </script>
 
 <template>
@@ -75,9 +128,11 @@ function onClickOpenDialog() {
         header="Example dialog and open method"
         footer="buton clickleri console üzerinden izlenebilir"
       >
-        <my-dialog ref="refDialog"> my dialog is opened! </my-dialog>
+        <my-dialog ref="refDialog"> my dialog is opened! </my-dialog> 
         <my-button @click="onClickOpenDialog" label="dialog"></my-button>
       </my-card>
+      <br />
+      <my-table :columns="columns" :data="rows" ></my-table>
     </div>
   </my-layout>
 </template>

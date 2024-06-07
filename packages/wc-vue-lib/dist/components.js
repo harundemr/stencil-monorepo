@@ -14,8 +14,8 @@ export const MyComponent = defineContainer('my-component', undefined, [
     'last'
 ]);
 export const MyDialog = defineContainer('my-dialog', undefined, [
-    'onOk',
-    'onCancel'
+    'ok',
+    'cancel'
 ]);
 export const MyInput = defineContainer('my-input', undefined, [
     'value',
@@ -25,6 +25,10 @@ export const MyInput = defineContainer('my-input', undefined, [
     'secretEvent'
 ], 'value', 'valueChange');
 export const MyLayout = defineContainer('my-layout', undefined);
+export const MyTable = defineContainer('my-table', undefined, [
+    'columns',
+    'data'
+]);
 export const MyTextField = defineContainer('my-text-field', undefined, [
     'placeholder',
     'value',
