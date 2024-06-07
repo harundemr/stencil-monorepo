@@ -18,11 +18,36 @@ export const MyDialog = defineContainer('my-dialog', undefined, [
     'cancel'
 ]);
 export const MyInput = defineContainer('my-input', undefined, [
-    'value',
-    'label',
+    'color',
+    'accept',
+    'autocapitalize',
+    'autocomplete',
+    'autocorrect',
+    'autofocus',
+    'clearInput',
+    'clearOnEdit',
+    'disabled',
+    'enterkeyhint',
+    'inputmode',
+    'max',
+    'maxlength',
+    'min',
+    'minlength',
+    'multiple',
+    'name',
+    'pattern',
+    'placeholder',
+    'readonly',
+    'required',
+    'spellcheck',
+    'step',
+    'size',
     'type',
-    'valueChange',
-    'secretEvent'
+    'value',
+    'myInput',
+    'myChange',
+    'myBlur',
+    'myFocus'
 ], 'value', 'valueChange');
 export const MyLayout = defineContainer('my-layout', undefined);
 export const MyTable = defineContainer('my-table', undefined, [

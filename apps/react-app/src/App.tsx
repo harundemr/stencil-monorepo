@@ -18,13 +18,17 @@ const App: React.FC = () => {
 
   const handleClick = () => {
     if (refInput.current) {
-      refInput.current.ExampleMethod("react app üzerinden çağrıldı");
+      // refInput.current.ExampleMethod("react app üzerinden çağrıldı");
     }
   };
 
-  const onChanc = (e: MyInputCustomEvent<string>) => {
+  const onChanc = (
+    e: MyInputCustomEvent<{
+      value: string | number | null | undefined;
+    }>
+  ) => {
     console.log(e.target.value);
-    setMessage(e.target.value);
+    setMessage(e.target.value as React.SetStateAction<string>);
   };
 
   const onClickOpenDialog = () => {
@@ -54,7 +58,7 @@ const App: React.FC = () => {
         <h4>my-layout content area</h4>
 
         <MyCard header="Example my-input value and onValueChange">
-          <MyInput ref={refInput} value={message} onValueChange={onChanc} />
+          <MyInput ref={refInput} value={message} onMyChange={onChanc} />
 
           <p>model value : {message}</p>
         </MyCard>
@@ -70,7 +74,7 @@ const App: React.FC = () => {
           header="Example dialog and open method"
           footer="buton clickleri console üzerinden izlenebilir"
         >
-          <MyDialog ref={refDialog} >my dialog is opened!</MyDialog>
+          <MyDialog ref={refDialog}>my dialog is opened!</MyDialog>
           <MyButton onClick={onClickOpenDialog} label="Open Dialog"></MyButton>
         </MyCard>
       </div>
