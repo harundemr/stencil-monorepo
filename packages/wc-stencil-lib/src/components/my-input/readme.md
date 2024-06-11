@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property         | Attribute        | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Default        |
@@ -35,7 +34,6 @@
 | `type`           | `type`           | The type of control to display. The default type is text.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | `"date" \| "email" \| "number" \| "password" \| "search" \| "tel" \| "text" \| "time" \| "url"`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | `'text'`       |
 | `value`          | `value`          | The value of the input.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `number \| string`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | `''`           |
 
-
 ## Events
 
 | Event      | Description                             | Type                                        |
@@ -44,7 +42,6 @@
 | `myChange` | Emitted when the value has changed.     | `CustomEvent<{ value: string \| number; }>` |
 | `myFocus`  | Emitted when the input has focus.       | `CustomEvent<void>`                         |
 | `myInput`  | Emitted when a keyboard input occurred. | `CustomEvent<KeyboardEvent>`                |
-
 
 ## Methods
 
@@ -56,8 +53,6 @@ Returns the native `<input>` element used under the hood.
 
 Type: `Promise<HTMLInputElement>`
 
-
-
 ### `setFocus() => Promise<void>`
 
 Sets focus on the specified `my-input`. Use this method instead of the global
@@ -67,9 +62,6 @@ Sets focus on the specified `my-input`. Use this method instead of the global
 
 Type: `Promise<void>`
 
+---
 
-
-
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

@@ -16,7 +16,7 @@ function onClick() {
 
 function onClickOpenDialog() {
   rows.value = [
-  {
+    {
       name: 'şaban',
       surname: 'Demir',
       age: '29',
