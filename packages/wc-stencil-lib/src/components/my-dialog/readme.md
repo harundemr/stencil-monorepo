@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Events
 
 | Event    | Description | Type               |
@@ -9,9 +10,12 @@
 | `cancel` |             | `CustomEvent<any>` |
 | `ok`     |             | `CustomEvent<any>` |
 
+
 ## Methods
 
 ### `open(onOk: () => void, onCancel: () => void) => Promise<void>`
+
+
 
 #### Parameters
 
@@ -24,6 +28,9 @@
 
 Type: `Promise<void>`
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

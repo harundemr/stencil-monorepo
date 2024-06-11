@@ -1,20 +1,36 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Prop, State, h, Watch } from '@stencil/core';
 
 @Component({
   tag: 'my-table',
   styleUrl: 'my-table.scss',
-  shadow: true,
 })
 export class MyTable {
   @Prop() columns: any[];
   @Prop() data: any[];
+  @Prop() test: string;
 
   @State() sortedData: any[];
   @State() sortKey: string;
   @State() sortDirection: 'asc' | 'desc' = 'asc';
   @State() filters: { [key: string]: string } = {};
 
+  @Watch('columns')
+  handleColumnsChange(newValue: string[]) {
+    console.log('Columns:', newValue);
+  }
+
+  @Watch('data')
+  handleDataChange(newValue: any[]) {
+    console.log('Data:', newValue);
+    this.setData();
+  }
+
   componentWillLoad() {
+    console.log('component will load', this.data, this.columns, this.test);
+    this.setData();
+  }
+
+  setData() {
     if (!Array.isArray(this.data)) {
       console.error('Data is not an array');
     } else {

@@ -15,6 +15,15 @@ function onClick() {
 }
 
 function onClickOpenDialog() {
+  rows.value = [
+  {
+      name: 'şaban',
+      surname: 'Demir',
+      age: '29',
+      email: 'harundemir@thy.com',
+      id: '8a04',
+    },
+  ];
   refDialog.value.open(
     () => {
       // ok button callback function
@@ -27,58 +36,64 @@ function onClickOpenDialog() {
   );
 }
 
-const columns = ref([
-  { key: 'id', label: 'Id' },
-  { key: 'name', label: 'Name' },
-  { key: 'surname', label: 'Surname' },
-  { key: 'age', label: 'Age' },
-  { key: 'email', label: 'Email' },
-]);
+const columns = ref();
 
-const rows = ref([
-  {
-    name: 'harun',
-    surname: 'Demir',
-    age: '29',
-    email: 'harundemir@thy.com',
-    id: '8a04',
-  },
-  {
-    id: '6ee5',
-    name: '1',
-    surname: '2',
-    age: '3',
-    email: '4',
-  },
-  {
-    id: 'e940',
-    name: '3',
-    surname: '4',
-    age: '5',
-    email: '6',
-  },
-  {
-    id: '6998',
-    name: '1',
-    surname: '3',
-    age: '4',
-    email: '5',
-  },
-  {
-    id: 'cf12',
-    name: 'Ulaş',
-    surname: 'Turan',
-    age: '27',
-    email: 'ulas@a.com',
-  },
-  {
-    id: 'd71a',
-    name: '3',
-    surname: '4',
-    age: '5',
-    email: '6',
-  },
-]);
+const rows = ref();
+
+onMounted(() => {
+  columns.value = [
+    { key: 'id', label: 'Id' },
+    { key: 'name', label: 'Name' },
+    { key: 'surname', label: 'Surname' },
+    { key: 'age', label: 'Age' },
+    { key: 'email', label: 'Email' },
+  ];
+
+  rows.value = [
+    {
+      name: 'harun',
+      surname: 'Demir',
+      age: '29',
+      email: 'harundemir@thy.com',
+      id: '8a04',
+    },
+    {
+      id: '6ee5',
+      name: '1',
+      surname: '2',
+      age: '3',
+      email: '4',
+    },
+    {
+      id: 'e940',
+      name: '3',
+      surname: '4',
+      age: '5',
+      email: '6',
+    },
+    {
+      id: '6998',
+      name: '1',
+      surname: '3',
+      age: '4',
+      email: '5',
+    },
+    {
+      id: 'cf12',
+      name: 'Ulaş',
+      surname: 'Turan',
+      age: '27',
+      email: 'ulas@a.com',
+    },
+    {
+      id: 'd71a',
+      name: '3',
+      surname: '4',
+      age: '5',
+      email: '6',
+    },
+  ];
+});
 </script>
 
 <template>
@@ -116,6 +131,8 @@ const rows = ref([
           @update:model-value="onChange"
         ></my-input>
       </my-card>
+      harun
+
       <br />
       <my-card
         header="Example call component method"
@@ -132,7 +149,8 @@ const rows = ref([
         <my-button @click="onClickOpenDialog" label="dialog"></my-button>
       </my-card>
       <br />
-      <my-table :columns="columns" :data="rows"></my-table>
+      {{ JSON.stringify(columns) }}
+      <my-table :columns="columns" :data="rows" test="harun1"></my-table>
     </div>
   </my-layout>
 </template>
