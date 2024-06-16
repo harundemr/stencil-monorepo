@@ -1,20 +1,12 @@
 import React, { createElement } from 'react';
 
-import {
-  attachProps,
-  camelToDashCase,
-  createForwardRef,
-  dashToPascalCase,
-  isCoveredByReact,
-  mergeRefs,
-} from './utils';
+import { attachProps, camelToDashCase, createForwardRef, dashToPascalCase, isCoveredByReact, mergeRefs } from './utils';
 
 export interface HTMLStencilElement extends HTMLElement {
   componentOnReady(): Promise<this>;
 }
 
-interface StencilReactInternalProps<ElementType>
-  extends React.HTMLAttributes<ElementType> {
+interface StencilReactInternalProps<ElementType> extends React.HTMLAttributes<ElementType> {
   forwardedRef: React.RefObject<ElementType>;
   ref?: React.Ref<any>;
 }
@@ -23,24 +15,22 @@ export const createReactComponent = <
   PropType,
   ElementType extends HTMLStencilElement,
   ContextStateType = {},
-  ExpandedPropsTypes = {},
+  ExpandedPropsTypes = {}
 >(
   tagName: string,
   ReactComponentContext?: React.Context<ContextStateType>,
   manipulatePropsFunction?: (
     originalProps: StencilReactInternalProps<ElementType>,
-    propsToPass: any,
+    propsToPass: any
   ) => ExpandedPropsTypes,
-  defineCustomElement?: () => void,
+  defineCustomElement?: () => void
 ) => {
   if (defineCustomElement !== undefined) {
     defineCustomElement();
   }
 
   const displayName = dashToPascalCase(tagName);
-  const ReactComponent = class extends React.Component<
-    StencilReactInternalProps<ElementType>
-  > {
+  const ReactComponent = class extends React.Component<StencilReactInternalProps<ElementType>> {
     componentEl!: ElementType;
 
     setComponentElRef = (element: ElementType) => {
@@ -60,8 +50,7 @@ export const createReactComponent = <
     }
 
     render() {
-      const { children, forwardedRef, style, className, ref, ...cProps } =
-        this.props;
+      const { children, forwardedRef, style, className, ref, ...cProps } = this.props;
 
       let propsToPass = Object.keys(cProps).reduce((acc: any, name) => {
         const value = (cProps as any)[name];
@@ -87,10 +76,7 @@ export const createReactComponent = <
         propsToPass = manipulatePropsFunction(this.props, propsToPass);
       }
 
-      const newProps: Omit<
-        StencilReactInternalProps<ElementType>,
-        'forwardedRef'
-      > = {
+      const newProps: Omit<StencilReactInternalProps<ElementType>, 'forwardedRef'> = {
         ...propsToPass,
         ref: mergeRefs(forwardedRef, this.setComponentElRef),
         style,

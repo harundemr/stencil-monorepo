@@ -1,3 +1,4 @@
+
 import * as d from './components';
 
 export const DIRECTIVES = [
@@ -8,5 +9,5 @@ export const DIRECTIVES = [
   d.MyInput,
   d.MyLayout,
   d.MyTable,
-  d.MyTextField,
+  d.MyTextField
 ];

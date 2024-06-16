@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property      | Attribute     | Description | Type      | Default         |
@@ -18,20 +19,27 @@
 | `success`     | `success`     |             | `boolean` | `false`         |
 | `value`       | `value`       |             | `string`  | `''`            |
 
+
 ## Events
 
 | Event      | Description | Type                  |
 | ---------- | ----------- | --------------------- |
 | `ifxInput` |             | `CustomEvent<string>` |
 
+
 ## Methods
 
 ### `reset() => Promise<void>`
+
+
 
 #### Returns
 
 Type: `Promise<void>`
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+
+
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
